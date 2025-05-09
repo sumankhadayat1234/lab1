@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insert/Delete Row</title>
+
+</head>
+<body>
+
+  <table id="sampleTable" border="1"> 
+    <tr>
+      <td>Row1 Col1</td> 
+      <td>Row1 Col2</td>
+    </tr> 
+    <tr>
+      <td>Row2 Col1</td> 
+      <td>Row2 Col2</td>
+    </tr> 
+    <tr>
+      <td>Row3 Col1</td> 
+      <td>Row3 Col2</td>
+    </tr> 
+    <tr>
+      <td>Row4 Col1</td> 
+      <td>Row4 Col2</td>
+    </tr> 
+    <tr>
+      <td>Row5 Col1</td> 
+      <td>Row5 Col2</td>
+    </tr> 
+  </table>
+  <br> 
+
+<button onclick="insert_Row()">Insert row</button>
+<button onclick="deleteRowTop()">Delete row</button>
+
+<div id="message">Message:</div>
+
+
+<script>
+    let RowNumber = 5; // Initial row count
+
+    function insert_Row() {
+      RowNumber++;
+      let table = document.getElementById("sampleTable");
+      let row = table.insertRow(); // Add to bottom
+      row.insertCell().innerHTML = "Row" + RowNumber + " Col1";
+      row.insertCell().innerHTML = "Row" + RowNumber + " Col2";
+    }
+
+    function deleteRowTop() {
+      let table = document.getElementById("sampleTable");
+      if (table.rows.length > 0) {
+        table.deleteRow(0); // Delete the first/top row
+        RowNumber--;  // Decrease row count
+      }
+      if (table.rows.length === 0) {
+        document.getElementById("message").innerText = "Message: No more rows to delete";
+    
+    }
+
+}
+
+
+  </script>
+
+</body>
+</html>
