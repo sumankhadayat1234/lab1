@@ -22,5 +22,5 @@ This simple HTML + JavaScript web page allows users to dynamically insert and de
  Author
 
 - Name: Suman Khadayat
-- GitHub: sumankhadayat1234 (https://github.com/sumankhadayat1234)
+- GitHub: sumankhadayat1234 (https://github.com/sumankhadayat1234/lab1.git)
 
